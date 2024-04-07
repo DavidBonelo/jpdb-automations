@@ -7,9 +7,10 @@ import java.time.Duration;
 
 public class Main {
     public static void main(String[] args) {
+        // String jpdbSessionId = "88fae62085e39b602ba14c606e469420"; // Example
         String jpdbSessionId = "YOUR_SESSION_TOKEN_GOES_HERE";
         String deckId = "78";
-        int newCardsLimit = 2;
+        int newCardsLimit = 20;
         int maxGlobalFreq = 10000;
 
         WebDriver driver = new FirefoxDriver();
