@@ -19,14 +19,13 @@ public class Main {
 
         try {
             jpdb.login(jpdbSessionId);
-            jpdb.navigateToDeck(deckId);
-            jpdb.start();
+            DeckPage deckPage = jpdb.navigateToDeck(deckId);
+            jpdb.mineNotUniquesInDeck(deckPage);
             Thread.sleep(Duration.ofSeconds(5));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             driver.quit();
         }
-
     }
 }
